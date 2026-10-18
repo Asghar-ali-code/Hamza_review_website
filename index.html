@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#1a4336">
+    <meta name="description" content="A guestbook for friends who visit Hamza's flat. Share a note about the hospitality, and read what other guests have written.">
+    <meta property="og:title" content="Mehmaan Nawazi — Hamza's Guestbook">
+    <meta property="og:description" content="A little taste of Pakistan, a lot of warmth and hospitality. Leave a note from your visit to Hamza's flat.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <title>Mehmaan Nawazi — Hamza's Guestbook</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Noto+Nastaliq+Urdu:wght@500;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap bar">
+        <a class="brand" href="#top">
+          <span class="logo" aria-hidden="true">
+            <svg viewBox="0 0 32 32">
+              <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6 14.5 16 6l10 8.5V26H6V14.5z"/>
+              <path fill="currentColor" d="M16 15.2c.45-1 1.9-1.1 2.35 0 .55 1.15-2.35 2.9-2.35 2.9s-2.9-1.75-2.35-2.9c.45-1.1 1.9-1 2.35 0z"/>
+            </svg>
+          </span>
+          <span class="brand-text">
+            <strong>Mehmaan Nawazi</strong>
+            <small>Hamza's Guestbook</small>
+          </span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#reviews">Guest reviews</a>
+          <a class="button small" href="#leave-a-review">Leave a review</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="wrap">
+        <noscript>
+          <p class="note">This guestbook needs JavaScript to load reviews and send a new one.</p>
+        </noscript>
+
+        <p id="setup-banner" class="note" hidden>
+          This guestbook is not saving reviews yet. Add the Firebase web config in firebase-config.js, publish the Firestore rules, then refresh.
+        </p>
+
+        <section class="hero" aria-labelledby="welcome-title">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <p class="kicker">Hamza's flat in the UK</p>
+              <p class="urdu urdu-kicker" lang="ur" dir="rtl">مہمان نوازی</p>
+              <h1 id="welcome-title">Welcome to Hamza's flat</h1>
+              <p class="lede">A little taste of Pakistan, a lot of warmth and hospitality. Friends who visit are treated like family.</p>
+              <p>We love hosting people here. If the evening, the food, or the company stayed with you, leave a short note. Hamza reads every review before it appears on this page.</p>
+              <div class="actions">
+                <a class="button" href="#leave-a-review">Leave a review</a>
+                <a class="button secondary" href="#reviews">Guest reviews</a>
+              </div>
+            </div>
+
+            <figure class="hero-card">
+              <svg class="chai" viewBox="0 0 360 320" role="img" aria-labelledby="chai-title">
+                <title id="chai-title">A cup of chai beneath an arch</title>
+                <path d="M48 268 V146 C48 62 312 62 312 146 V268" fill="#e7f3ec" stroke="#1a4336" stroke-width="2.5"/>
+                <path d="M28 268 H332" fill="none" stroke="#1a4336" stroke-width="2.5" stroke-linecap="round"/>
+                <g transform="translate(156 18) scale(1.2)">
+                  <path fill="#9d4030" d="M12 21.2 10.6 19.9C5.4 15.2 2 12.2 2 8.4 2 5.4 4.4 3 7.4 3c1.7 0 3.3.8 4.3 2.1C12.7 3.8 14.3 3 16 3c3 0 5.4 2.4 5.4 5.4 0 3.8-3.4 6.8-8.6 11.5L12 21.2z"/>
+                </g>
+                <ellipse cx="176" cy="246" rx="84" ry="13" fill="#f6efe2" stroke="#1a4336" stroke-width="2"/>
+                <path d="M128 156c-2 42 8 86 22 96h58c16-10 26-54 22-96z" fill="#fffbf6" stroke="#1a4336" stroke-width="2.5" stroke-linejoin="round"/>
+                <ellipse cx="179" cy="158" rx="44" ry="9" fill="#c4783a"/>
+                <ellipse cx="179" cy="156" rx="34" ry="5.5" fill="#e8b56a"/>
+                <path d="M228 172c30 2 32 46 2 50" fill="none" stroke="#1a4336" stroke-width="2.5" stroke-linecap="round"/>
+                <path class="steam" d="M150 124c8-14-6-24 2-38" fill="none" stroke="#1a4336" stroke-width="2" stroke-linecap="round"/>
+                <path class="steam steam-2" d="M176 116c8-16-6-28 2-44" fill="none" stroke="#1a4336" stroke-width="2" stroke-linecap="round"/>
+                <path class="steam steam-3" d="M202 126c7-12-5-22 2-34" fill="none" stroke="#1a4336" stroke-width="2" stroke-linecap="round"/>
+                <g>
+                  <rect x="78" y="286" width="204" height="6" rx="3" fill="#1a4336"/>
+                  <rect x="78" y="294" width="204" height="4" fill="#c4a15a"/>
+                  <rect x="78" y="300" width="204" height="6" rx="3" fill="#9d4030"/>
+                </g>
+              </svg>
+              <figcaption>
+                <p class="eyebrow">A home away from home</p>
+                <p class="quote">Guests today, family forever.</p>
+                <p class="urdu" lang="ur" dir="rtl">آج کے مہمان، ہمیشہ کے لیے خاندان۔</p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <div class="board">
+          <section id="reviews" class="panel reviews" aria-labelledby="reviews-title">
+            <div class="panel-head">
+              <h2 id="reviews-title">What guests are saying</h2>
+              <p>Notes appear here after Hamza has read them. Newest first.</p>
+            </div>
+            <p id="preview-note" class="preview-note" hidden></p>
+            <p id="review-summary" class="review-summary" aria-live="polite">Loading reviews…</p>
+            <div id="review-list" class="review-list"></div>
+            <div id="review-empty" class="empty" hidden>
+              <p class="empty-title">Be the first to leave a note</p>
+              <p>When a guest leaves a review and Hamza approves it, it will show up here.</p>
+            </div>
+            <div id="review-error" class="error-box" hidden>
+              <p id="review-error-text"></p>
+              <button type="button" id="retry-reviews" class="button secondary">Try again</button>
+            </div>
+          </section>
+
+          <section id="leave-a-review" class="panel composer" aria-labelledby="form-title">
+            <div class="panel-head">
+              <h2 id="form-title">Share your feedback</h2>
+              <p>A first name or nickname is enough. Your note stays hidden until Hamza approves it.</p>
+            </div>
+
+            <form id="review-form" novalidate>
+              <div class="field">
+                <label for="guest-name">Your name</label>
+                <input id="guest-name" name="name" type="text" autocomplete="nickname" autocapitalize="words" maxlength="40" required aria-describedby="name-hint">
+                <p id="name-hint" class="hint">A first name or nickname is perfect.</p>
+                <p id="name-error" class="field-error" hidden></p>
+              </div>
+
+              <fieldset class="field" id="rating-field" aria-describedby="rating-hint">
+                <legend>Your rating</legend>
+                <div class="star-row">
+                  <input type="radio" name="rating" id="star-5" value="5">
+                  <label for="star-5"><span aria-hidden="true">★</span><span class="visually-hidden">5 stars</span></label>
+                  <input type="radio" name="rating" id="star-4" value="4">
+                  <label for="star-4"><span aria-hidden="true">★</span><span class="visually-hidden">4 stars</span></label>
+                  <input type="radio" name="rating" id="star-3" value="3">
+                  <label for="star-3"><span aria-hidden="true">★</span><span class="visually-hidden">3 stars</span></label>
+                  <input type="radio" name="rating" id="star-2" value="2">
+                  <label for="star-2"><span aria-hidden="true">★</span><span class="visually-hidden">2 stars</span></label>
+                  <input type="radio" name="rating" id="star-1" value="1">
+                  <label for="star-1"><span aria-hidden="true">★</span><span class="visually-hidden">1 star</span></label>
+                </div>
+                <p id="rating-hint" class="hint">Required. Choose from 1 to 5 stars.</p>
+                <p id="rating-chosen" class="rating-chosen">No rating chosen yet</p>
+                <p id="rating-error" class="field-error" hidden></p>
+              </fieldset>
+
+              <div class="field">
+                <label for="message">Your message</label>
+                <textarea id="message" name="message" rows="5" maxlength="500" required autocapitalize="sentences" spellcheck="true" aria-describedby="message-hint"></textarea>
+                <div class="field-meta">
+                  <p id="message-hint" class="hint">10 to 500 characters. Leave out phone numbers, addresses, and anyone else's private details.</p>
+                  <p id="message-count" class="char-count">0 / 500</p>
+                </div>
+                <p id="message-error" class="field-error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label class="consent" for="consent">
+                  <input id="consent" name="consent" type="checkbox" value="yes">
+                  <span>I understand my display name, rating, and review may be published on this page, and I have not included private information. <a href="#privacy">Privacy notice</a></span>
+                </label>
+                <p id="consent-error" class="field-error" hidden></p>
+              </div>
+
+              <div class="hp" aria-hidden="true">
+                <label for="fax_number">Fax</label>
+                <input id="fax_number" name="fax_number" type="text" tabindex="-1" autocomplete="off">
+              </div>
+
+              <p id="form-status" class="form-status" role="status" hidden></p>
+              <button type="submit" class="button submit" id="submit-review">Submit review</button>
+            </form>
+          </section>
+        </div>
+
+        <section id="welcome-card" class="panel pass" aria-labelledby="card-title">
+          <div class="pass-copy">
+            <h2 id="card-title">A card for the tea table</h2>
+            <p>Print this and leave it where guests can see it. The code opens this guestbook, so they can read notes or leave one of their own.</p>
+            <p id="qr-hint" class="hint" hidden></p>
+            <p class="site-url" id="site-url"></p>
+            <button type="button" class="button secondary no-print" id="print-card">Print welcome card</button>
+          </div>
+          <div class="qr-frame" id="qr-frame" role="img" aria-label="QR code that opens this guestbook"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p class="footer-thanks">Thank you for being our guest. We truly appreciate your feedback.</p>
+        <p class="urdu urdu-thanks" lang="ur" dir="rtl">شکریہ</p>
+        <p class="footer-line">Pakistani hospitality, wherever you are.</p>
+        <p class="footer-note">A personal guestbook for Hamza's flat.</p>
+        <div class="footer-links">
+          <a href="#privacy">Privacy</a>
+          <a href="#removal">Remove a review</a>
+        </div>
+        <section id="privacy" class="fine-print">
+          <h2>Privacy</h2>
+          <p>By submitting your review, you agree that your feedback and chosen display name may be published publicly. Please do not include private information about yourself or others.</p>
+          <p>This page stores the display name you choose, your star rating, your message, and the time you submit it. Hamza uses that to decide what appears here. It does not ask for your email, phone number, or photos, and it does not publish the flat's address. New reviews stay unpublished until they are approved.</p>
+          <h3 id="removal">Removing a review</h3>
+          <p id="removal-text">To take a review down, ask Hamza in person. He can remove it before or after it is published.</p>
+        </section>
+      </div>
+    </footer>
+
+    <script src="vendor/qrcode-generator.js"></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
