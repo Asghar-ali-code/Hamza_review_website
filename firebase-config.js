@@ -6,12 +6,13 @@
 export const removalEmail = "";
 
 export const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.firebasestorage.app",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID",
+  apiKey: "AIzaSyA5ZeqKVUqlIgfV3TwQw0MRkp7ZSrwIoYs",
+  authDomain: "hamzareviews-14c94.firebaseapp.com",
+  projectId: "hamzareviews-14c94",
+  storageBucket: "hamzareviews-14c94.firebasestorage.app",
+  messagingSenderId: "1001379782318",
+  appId: "1:1001379782318:web:1a1829de8c46a4f7dc573f",
+  measurementId: "G-SY5GZYJEC3",
 };
 
 export function isFirebaseConfigured(config = firebaseConfig) {
